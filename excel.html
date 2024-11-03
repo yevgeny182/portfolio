@@ -69,76 +69,70 @@
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="images/bobashop_webdev2_order.png" class="image">
-										<img src="images/bobashop_webdev2_order.png"   alt="" data-position="top center" />
+									<a href="images/excel_showcase.png" class="image">
+										<img src="images/excel_showcase.png"   alt="" data-position="top center" />
+										
 									</a>
-									
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Order Page</h3>
+												<h3>SUMIF and SUMIFS</h3>
 											</header>
-											<p>The Order Page, also known as the dashboard of the website allows the crew to create orders. 
+											<p>To calculate specific metrics like the "Show Rate" by line of business (LOB), I used the <code>SUMIFS</code> function. "Show Rate" is defined as <strong>Present / Scheduled</strong>, where:
 												<br/><br/>
-												To create an order, the crew can simply input the customer name, select an item by clicking the checkbox, specify the quantity, 
-												and then save the information. This streamlined process ensures efficient order management.</p>
+												<strong>Present:</strong> Column I<br/>
+												<strong>Scheduled:</strong> Column K<br/>
+												<strong>Date:</strong> Column A<br/>
+												<strong>LOB:</strong> Column G
+												<br/><br/>
+												<strong>Example formula:</strong> 
+												<code>=SUMIFS(I:I, A:A, "12/10/2023", G:G, "Prepaid") / SUMIFS(K:K, A:A, "12/10/2023", G:G, "Prepaid")</code>
+												<br/><br/>
+												To count calls by supervisor, I used <code>SUMIF</code> to match the supervisor name in the calls column. An example:
+												<br/><br/>
+												<strong>Example formula:</strong> 
+												<code>=SUMIF(E:E, "John Doe", H:H)</code>
+												<br/><br/>
+												Formulas may vary depending on how a company wants their data to be handled.
+											</p>
 											<ul class="actions">
 												
 											</ul>
 										</div>
-									</div>
+									</div>									
 								</section>
 								<section>
-									<a href="images/bobashop_webdev2_sales.png" class="image">
-										<img src="images/bobashop_webdev2_sales.png" alt="Sales Image 2" data-position="top center" />
-										<img src="images/bobashop_webdev2_sales1.png"  alt="Sales Image 1" data-position="top center" />
+									<a href="images/excel_showcase2.png" class="image">
+										<img src="images/excel_showcase2.png" alt="excel showcase" data-position="top center" />
 
-									</a>
-												
+									</a>		
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												
-												<h3>Sales Page</h3>
+												<h3>Basic Excel Calculations with RANK</h3>
 											</header>
 											<p>
-												The Sales Page presents a record of each order created from the Order Page. 
-												A table is shown displaying the date, customer name, and the order price, labeled as "Total Sales." 
-												<br/> <br/> The "Details" section provides the full order breakdown, which can be viewed in a 
-												modal by clicking the "View" button.</p>
-											
+												To calculate "Percent to Goal" on the data page, we use the formula: <strong>raw data / goal</strong>. After calculating this percentage for each item, we determine the "Weight" by multiplying <strong>Percent to Goal</strong> by <strong>Weight Capped</strong>.
+												<br/><br/>
+												Finally, to rank these values, we use the <code>RANK</code> function:
+												<br/><br/>
+												<strong>Example formula:</strong> 
+												<code>=RANK(P12, $P$12:$P$26, 0)</code>
+												<br/><br/>
+												In this example:
+												<ul>
+													<li><strong>P12</strong> is the starting cell to rank.</li>
+													<li><strong>$P$12:$P$26</strong> defines the range of values to rank.</li>
+													<li><strong>0</strong> specifies descending order (highest value ranks first).</li>
+												</ul>
+											</p>
 										</div>
-									</div>
+									</div>					
 								</section>
-								<section>
-									<a href="images/bobashop_webdev2_addprod.png" class="image">
-										<img src="images/bobashop_webdev2_addprod.png" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Product Page</h3>
-											</header>
-											<p>The crew can easily add, update, or delete new or existing products on this page, 
-												streamlining operations by eliminating manual processes and making management more efficient. </p>
-										</div>
-									</div>
-								</section>
-							</section>
+
 
 						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Access</h2>
-									</header>
-									<p>This website is a course project in Web Development with a repository available on GitHub.</p>
-									<a href="https://github.com/yevgeny182/web-development-2" class="button next">
-										<span class="icon brands alt fa-github"></span> Go to Website Repository
-									</a>
-								</div>
-							</section>
-
+						
 					</div>
 
 				<!-- Contact -->
@@ -149,7 +143,7 @@
 						<div class="inner">
 							
 							<ul class="copyright">
-								<li>&copy; Yevgeny A.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Yevgeny A.</li>
 							</ul>
 						</div>
 					</footer>
