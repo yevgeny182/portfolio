@@ -2824,13 +2824,13 @@ input, select, textarea {
 
 				.tiles article h3 a, 
 				.tiles article p {
-					color: rgb(16, 36, 32); /* Default color for other tiles */
+					color: rgb(16, 36, 32); 
 				}
 
 				.tiles article:hover h3 a, 
 				.tiles article:hover p {
 					color: #f8f8f8;
-					; /* White on hover for other tiles */
+					
 				}
 
 			
@@ -3404,7 +3404,7 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("/images/banner_img3.png");
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3515,11 +3515,11 @@ input, select, textarea {
 			}
 			
 			#banner.style1:after {
-				background-color: rgba(111, 195, 223, 1);
+				background-color: rgba(111, 195, 223, 0.6);
 			}
 			
 			#banner.style2:after {
-				background-color: rgba(141, 130, 196, 1);
+				background-color: rgba(141, 130, 196, 0.75);
 			}
 			
 			#banner.style3:after {
@@ -3527,7 +3527,7 @@ input, select, textarea {
 			}
 			
 			#banner.style4:after {
-				background-color: rgba(231, 183, 136, 1);
+				background-color: rgba(231, 183, 136, 0.75);
 			}
 			
 			#banner.style5:after {
