@@ -330,6 +330,8 @@
 				<script>
 					if (window.location.href === 'http://127.0.0.1:5500/index.html' || 'http://127.0.0.1:5500/') {
 						document.getElementById('saveButton').style.display = 'inline-block';
+					}else if(window.location.href === 'https://portfolio-gg-cattua-182.vercel.app/index.html' || 'https://portfolio-gg-cattua-182.vercel.app'){
+						document.getElementById('saveButton').style.display = 'none';
 					}
 		
 					function saveLastUpdatedDate() {
