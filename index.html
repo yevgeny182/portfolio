@@ -323,33 +323,9 @@
 					<div class="inner">
 						<ul class="copyright">
 							<li>&copy; Yevgeny A.</li> 
-							<li>Last Updated: <span id="lastUpdated"></span></li>
 						</ul>
-						<!-- <button onclick="saveLastUpdatedDate()">Save</button> -->
 					</div>
 				</footer>
-				
-				<script>
-			
-					function saveLastUpdatedDate() {
-						const options = { year: 'numeric', month: 'long', day: 'numeric' };
-						const currentDate = new Date().toLocaleDateString(undefined, options);
-						localStorage.setItem('lastUpdatedDate', currentDate);
-						document.getElementById('lastUpdated').textContent = currentDate;
-					}
-				
-					function loadLastUpdatedDate() {
-						const savedDate = localStorage.getItem('lastUpdatedDate');
-						
-						// Check if there’s a saved date, and display it
-						if (savedDate) {
-							document.getElementById('lastUpdated').textContent = savedDate;
-						}
-					}
-					loadLastUpdatedDate();
-				</script>
-				
-
 			</div>
 
 		<!-- Scripts -->
